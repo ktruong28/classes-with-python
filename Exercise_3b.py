@@ -1,5 +1,3 @@
-import datetime
-
 class Person:
 
     def __init__(self):
