@@ -1,5 +1,3 @@
-import datetime
-
 class Person:
 
     TITLES = ('Dr', 'Mr', 'Mrs', 'Ms')
