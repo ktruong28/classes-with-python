@@ -2,22 +2,25 @@ import datetime
 
 class Person:
 
-    def __init__(self, name, surname, birthdate, address, telephone, email):
+    TITLES = ('Dr', 'Mr', 'Mrs', 'Ms')
+
+    def __init__(self, title, name, surname):
+        if title not in self.TITLES:
+            raise ValueError("%s is not a valid title." % title)
+
+        self.title = title
         self.name = name
         self.surname = surname
 
 if __name__ == "__main__":
     person = Person\
     (
+        "Mrs",
         "Jane",
-        "Doe",
-        datetime.date(1992, 3, 12),
-        "123 Sesame Street, Birdhouse Lane",
-        "555 123 4567",
-        "jane.doe@example.com"
+        "Doe"
     )
 
+    print(person.title)
     print(person.name)
-    print(person.email)
-    print(person.age())
-    print(person.age())
+    print(person.surname)
+
