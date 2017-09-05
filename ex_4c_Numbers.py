@@ -23,9 +23,7 @@ class Numbers(object):
 
     @value.setter
     def value(self, xyval):
-        x, y = xyval[0], xyval[1]
-        self.x = x
-        self.y = y
+        self.x, self.y = xyval
 
     @value.deleter
     def value(self):
